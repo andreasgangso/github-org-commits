@@ -46,7 +46,7 @@ func main() {
 	}
 
 	commitAuthors := make(map[string]map[string]struct{})
-	oneWeekAgo := time.Now().Add(-7 * 24 * time.Hour)
+	oneWeekAgo := time.Now().Add(-7.5 * 24 * time.Hour)
 
 	for _, repo := range allRepos {
 		branches, _, err := client.Repositories.ListBranches(ctx, organization, *repo.Name, &github.BranchListOptions{})
